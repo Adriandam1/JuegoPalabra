@@ -52,7 +52,7 @@ class ViewModel:ViewModel() {
         Log.d("Comprobando", sinonimoAdivinar)
 
         // Mostrar el Toast con el sinónimo
-        Toast.makeText(context, "Sinónimo: $sinonimoAdivinar", Toast.LENGTH_SHORT).show()
+        //Toast.makeText(context, "Sinónimo: $sinonimoAdivinar", Toast.LENGTH_SHORT).show()
 
         estadoLiveData.value = Estados.ADIVINANDO
     }

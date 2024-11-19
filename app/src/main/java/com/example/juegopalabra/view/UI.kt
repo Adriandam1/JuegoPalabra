@@ -1,6 +1,7 @@
 package com.example.juegopalabra.view
 
 import android.util.Log
+import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -25,11 +26,14 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.lifecycle.compose.LocalLifecycleOwner
+import com.example.juegopalabra.R
 import com.example.juegopalabra.viewmodel.ViewModel
 
 @Composable
@@ -45,6 +49,13 @@ fun MyApp(viewModel: ViewModel) {
         modifier = Modifier
             .fillMaxSize()
     ) {
+        val backgroundImage = painterResource(id = R.drawable.daniel)
+        Image(
+            painter = backgroundImage,
+            contentDescription = null,
+            contentScale = ContentScale.FillHeight,
+            modifier = Modifier.fillMaxSize()
+        )
         Column {
             Row {
                 ShowRondas(ronda)
@@ -95,7 +106,7 @@ fun ShowSinonimo(sinonimo:String){
     ) {
 
         Text(text = "Sinonimo: $sinonimo" ,
-            fontSize = 23.sp,
+            fontSize = 24.sp,
             fontWeight = FontWeight.Bold,
             color = Color.Black)
 
@@ -167,7 +178,7 @@ fun ButtonEnter(viewModel: ViewModel, palabraJugador: String, palabraMaquina: St
             Text(
                 text = "Enter",
                 color = Color.Black,
-                fontSize = 20.sp
+                fontSize = 24.sp
             )
         }
     }
