@@ -1,10 +1,19 @@
 ## JuegoPalabra ENUNCIADO
--  El jugador inicia la partida.
--  Se le facilitará una palabra sinonima para que acierte la palabra oculta.
--  Contadores con aciertos, fallo y rondas.
--  Cuando llegue a 3 fallos, o 2 si ya acerto una palabra o 1 si ya acerto 2 palabras habra perdido.
--  Mientras no se cumpla la condición para perder el jugador podrá jugar indefinidamente.
--  Cuando el jugador pierda la aplicación se reiniciará.
+
+Implementa una app que es un juego de adivinar una palabra, dando pistas  
+Se genera una palabra random de un diccionario.  
+Las pistas son sinónimos de esta palabra  
+En cada ronda la app muestra un sinónimo.  
+Si al tercer intento el jugador no acierta, pierde y el juego termina  
+Si en algún intento el jugador acierta, gana y el juego termina  
+
+Se valorará el uso de Singleton y Enum (1 punto)  
+Se valorará el uso de estados (1 punto)  
+Se valorará el uso del patrón observer (1 punto)  
+Se valorará el esquema MVVM (1 punto)  
+Se valorará el uso de métodos con parámetros y retorno de valores (0,5 punto)  
+El funcionamiento de la aplicación (0,5 punto).  
+Crea un Readme explicando lo que realizaste (1 punto)  
 
 -----------------------------------------------------
 ## 1. Explicación de los datos:  
