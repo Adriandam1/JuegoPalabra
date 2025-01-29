@@ -17,7 +17,7 @@ Crea un Readme explicando lo que realizaste (1 punto)
 
 -----------------------------------------------------
 ## 1. Explicación de los datos:  
-Como vamos a utilizar estados durante el uso de la aplicación hago un resumen de los mismos. Tenemos nuestra clase **enum Estados** que recoge 3 Boolean:  
+Tenemos nuestra clase **enum Estados** que recoge 3 Boolean:  
 El boolean **startActivo** es un boolean que utilizaremos para activar o desactivar nuestro boton "ButtonStart".  
 El boolean **enterActivo** es el boolean que utilizaremos para activar o desactivar nuestro boton "ButtonEnter" que el jugador clicará para introducir las palabras
 El boolean **textoActivo** es el boolean que utilizaremos para habilitar nuestro TextField, en el que el jugador podrá escribir las palabras.
