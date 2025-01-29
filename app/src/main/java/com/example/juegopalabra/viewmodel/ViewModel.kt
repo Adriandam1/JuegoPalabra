@@ -58,7 +58,7 @@ class ViewModel:ViewModel() {
     }
 
     fun addPalabraJugador(palabraJugador: String, palabraMaquina: String, context: Context) {
-        Log.d("palabraJ", getPalabraJugador())
+        Log.d("palabraJugador", getPalabraJugador())
         Log.d("Comprobando", palabraJugador)
         Log.d("Comprobando", palabraMaquina)
 
@@ -102,37 +102,23 @@ class ViewModel:ViewModel() {
         }
     }
 
-    private fun perder(aciertos: Int, fallos: Int, context: Context) {
-        if (aciertos == 0 && fallos == 3) {
-            estadoLiveData.value = Estados.INICIO
-            Log.d("GanarOPerder", "Has perdido")
-            // Usa el context proporcionado para mostrar el Toast
-            Toast.makeText(context, "¡Has perdido!", Toast.LENGTH_LONG).show()
-
-            restartRondas()
-            restartAciertos()
-            restartFallos()
-            restartSinonimo()
-        } else if (aciertos == 1 && fallos == 2) {
+    fun perder(aciertos: Int, fallos: Int, context: Context) {
+        // Cambiar la lógica para que siempre pierda al llegar a 3 fallos
+        if (fallos == 3) {
             estadoLiveData.value = Estados.INICIO
             Log.d("GanarOPerder", "Has perdido")
             Toast.makeText(context, "¡Has perdido!", Toast.LENGTH_LONG).show()
 
-            restartRondas()
-            restartAciertos()
-            restartFallos()
-            restartSinonimo()
-        } else if (aciertos > 1 && fallos == 1) {
-            estadoLiveData.value = Estados.INICIO
-            Log.d("GanarOPerder", "Has perdido")
-            Toast.makeText(context, "¡Has perdido!", Toast.LENGTH_LONG).show()
-
+            // Reiniciar los contadores
             restartRondas()
             restartAciertos()
             restartFallos()
             restartSinonimo()
         }
     }
+
+
+
 
 
 
