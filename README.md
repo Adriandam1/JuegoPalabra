@@ -113,12 +113,12 @@ Cada ronda del juego tiene un número limitado de intentos (3 intentos). El juga
 ## 4. **Vista de la app (UI)**  
 La función **MyApp** es la función principal que organiza todos los componentes en la interfaz de usuario.  
 Tenemos un Box con una Column dentro de la que tenemos 6 Row en la que se encuentran todos los elementos de la vista.  
-En la primera Row tenemos ShowRondas que es un texto que indica el numero de ronda.
-En la segunda Row tenem ShowSinonimo que es otro texto en el que se muestra al jugador el sinńomi que debe buscar.  
-En la tercera Row tenemos TextNombreEscribir con el Textfield para que escriba el jugador.  
-En la cuarta Row tenemos nuestro boton ButtonEnter, para que el usuario introduzca su palabra.  
-En la quinta Row tenemos los textos ShowAciertos y ShowFallos que indican al jugador cuantas palabras acerto y cuantos fallos lleva en la ronda actual.  
-En la ultima Row tenemos nuestro boton ButtonStart para que el jugador inicie las rondas.  
+- En la primera Row tenemos ShowRondas que es un texto que indica el numero de ronda.
+- En la segunda Row tenem ShowSinonimo que es otro texto en el que se muestra al jugador el sinńomi que debe buscar.  
+- En la tercera Row tenemos TextNombreEscribir con el Textfield para que escriba el jugador.  
+- En la cuarta Row tenemos nuestro boton ButtonEnter, para que el usuario introduzca su palabra.  
+- En la quinta Row tenemos los textos ShowAciertos y ShowFallos que indican al jugador cuantas palabras acerto y cuantos fallos lleva en la ronda actual.  
+- En la ultima Row tenemos nuestro boton ButtonStart para que el jugador inicie las rondas.  
 ![fotoSinonimos](https://github.com/user-attachments/assets/f8044369-0e3b-4512-b5c2-2c44d0d4f9a2)
 
 
