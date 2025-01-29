@@ -117,11 +117,6 @@ class ViewModel:ViewModel() {
         }
     }
 
-
-
-
-
-
     fun setPalabraMaquina(palabraMaquina: String){
         Datos.palabra = palabraMaquina
     }
