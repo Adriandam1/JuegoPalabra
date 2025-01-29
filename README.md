@@ -7,8 +7,8 @@
 -  Cuando el jugador pierda la aplicación se reiniciará.
 
 -----------------------------------------------------
-## 1. Explicación de los estados:  
-Como vamos a utilizar estados durante el uso de la aplicación hago un resumen de los mismos. En nuestro Datos.kt tenemos nuestra clase enum Estados que recoge 3 Boolean:  
+## 1. Explicación de los datos:  
+Como vamos a utilizar estados durante el uso de la aplicación hago un resumen de los mismos. Tenemos nuestra clase **enum Estados** que recoge 3 Boolean:  
 El boolean **startActivo** es un boolean que utilizaremos para activar o desactivar nuestro boton "ButtonStart".  
 El boolean **enterActivo** es el boolean que utilizaremos para activar o desactivar nuestro boton "ButtonEnter" que el jugador clicará para introducir las palabras
 El boolean **textoActivo** es el boolean que utilizaremos para habilitar nuestro TextField, en el que el jugador podrá escribir las palabras.
@@ -19,9 +19,28 @@ enum class Estados(val startActivo:Boolean, val enterActivo:Boolean, val textoAc
     ADIVINANDO(startActivo = false, enterActivo = true, textoActivo = true) // estado en el que el jugador esta introduciendo su palabra
 }
 ```
-
-
-
+Así mismo tnemos nuestro **Datos.kt** en el que tenemos nuestro objeto singleton Datos con las var que vamos a usar en la App. 
+```bash
+object Datos {
+    var palabra = ""
+    var palabraJugador = ""
+    var sinonimo = ""
+    var ronda = 0
+    var aciertos = 0
+    var fallos = 0
+}
+```
+Y tamnbién dentro de **Datos.kt** tenemos nuetra clase Diccionario en la que tenemos nuestra lista de sinónimos.
+```bash
+enum class Diccionario(val id:Int, val nombre:String, val sinonimo:String){
+    PALABRA1(id = 1, "listo", "inteligente"),
+    PALABRA2(id = 2, "puerta", "entrada"),
+    PALABRA3(id = 3, "luna", "satelite"),
+    PALABRA4(id = 4, "rapido", "veloz"),
+    PALABRA5(id = 5, "lento", "tortuga"),
+    PALABRA6(id = 6, "dificil", "complicado"),
+    PALABRA7(id = 7, "tonto", "bobo")
+```
 ### comienzo explicacion del flujo
 
 Esta aplicación es un juego en el que el jugador debe adivinar una palabra a partir de sus sinónimos. A continuación, te explico el flujo de la aplicación, basado en el código del `ViewModel`.  
@@ -45,7 +64,7 @@ Cuando se inicia el juego, se establece una palabra aleatoria a adivinar y su co
     }
 ```
 ----------------------------------------------------
-## 3. **Rondas y Aciertos**
+## 3. **Rondas y Aciertos (ViewModel)**
 
 Cada ronda del juego tiene un número limitado de intentos (3 intentos). El jugador puede introducir una palabra en un campo de texto para intentar adivinar la palabra correcta.
 
@@ -91,3 +110,24 @@ Cada ronda del juego tiene un número limitado de intentos (3 intentos). El juga
         }
     }
 ```
+## 4. **Vista de la app (UI)**  
+La función **MyApp** es la función principal que organiza todos los componentes en la interfaz de usuario.  
+Tenemos un Box con una Column dentro de la que tenemos 6 Row en la que se encuentran todos los elementos de la vista.  
+En la primera Row tenemos ShowRondas que es un texto que indica el numero de ronda.
+En la segunda Row tenem ShowSinonimo que es otro texto en el que se muestra al jugador el sinńomi que debe buscar.  
+En la tercera Row tenemos TextNombreEscribir con el Textfield para que escriba el jugador.  
+En la cuarta Row tenemos nuestro boton ButtonEnter, para que el usuario introduzca su palabra.  
+En la quinta Row tenemos los textos ShowAciertos y ShowFallos que indican al jugador cuantas palabras acerto y cuantos fallos lleva en la ronda actual.  
+En la ultima Row tenemos nuestro boton ButtonStart para que el jugador inicie las rondas.  
+![fotoSinonimos](https://github.com/user-attachments/assets/f8044369-0e3b-4512-b5c2-2c44d0d4f9a2)
+
+
+
+
+
+
+
+
+
+
+
